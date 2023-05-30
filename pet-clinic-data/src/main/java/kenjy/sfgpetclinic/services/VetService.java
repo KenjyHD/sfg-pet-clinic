@@ -3,12 +3,6 @@ package kenjy.sfgpetclinic.services;
 import kenjy.sfgpetclinic.model.Vet;
 import java.util.Set;
 
-public interface VetService {
-    Vet findByLastName(String lastName);
+public interface VetService extends CrudService<Vet, Long> {
 
-    Vet findById(Long id);
-
-    Vet save(Vet vet);
-
-    Set<Vet> findAll();
 }
