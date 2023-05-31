@@ -1,15 +1,13 @@
 package kenjy.sfgpetclinic.services.map;
 
-import kenjy.sfgpetclinic.model.Owner;
-import kenjy.sfgpetclinic.services.CrudService;
-import kenjy.sfgpetclinic.services.OwnerService;
+import kenjy.sfgpetclinic.model.Pet;
+import kenjy.sfgpetclinic.services.PetService;
 
 import java.util.Set;
 
-public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
-
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
-    public Set<Owner> findAll() {
+    public Set<Pet> findAll() {
         return super.findAll();
     }
 
@@ -19,17 +17,17 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
     }
 
     @Override
-    public void delete(Owner object) {
+    public void delete(Pet object) {
         super.delete(object);
     }
 
     @Override
-    public Owner save(Owner object) {
+    public Pet save(Pet object) {
         return super.save(object.getId(), object);
     }
 
     @Override
-    public Owner findById(Long id) {
+    public Pet findById(Long id) {
         return super.findById(id);
     }
 }
