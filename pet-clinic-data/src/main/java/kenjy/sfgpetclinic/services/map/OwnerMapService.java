@@ -3,9 +3,11 @@ package kenjy.sfgpetclinic.services.map;
 import kenjy.sfgpetclinic.model.Owner;
 import kenjy.sfgpetclinic.services.CrudService;
 import kenjy.sfgpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
