@@ -1,14 +1,13 @@
 package kenjy.sfgpetclinic.services.map;
 
 import kenjy.sfgpetclinic.model.Owner;
-import kenjy.sfgpetclinic.services.CrudService;
 import kenjy.sfgpetclinic.services.OwnerService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
+public class OwnerServiceMap extends AbstractServiceMap<Owner, Long> implements OwnerService {
 
     @Override
     public Set<Owner> findAll() {
@@ -27,7 +26,7 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public Owner save(Owner object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
