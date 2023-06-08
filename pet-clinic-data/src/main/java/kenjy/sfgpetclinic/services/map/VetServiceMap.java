@@ -4,11 +4,13 @@ import kenjy.sfgpetclinic.model.Specialty;
 import kenjy.sfgpetclinic.model.Vet;
 import kenjy.sfgpetclinic.services.SpecialityService;
 import kenjy.sfgpetclinic.services.VetService;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Primary
 public class VetServiceMap extends AbstractServiceMap<Vet, Long> implements VetService {
     private final SpecialityService specialtyService;
 
