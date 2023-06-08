@@ -6,12 +6,14 @@ import kenjy.sfgpetclinic.services.OwnerService;
 import kenjy.sfgpetclinic.services.PetService;
 import kenjy.sfgpetclinic.services.PetTypeService;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-@Primary
+//@Primary
+@Profile({"default", "map"})
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
     private final PetTypeService petTypeService;
     private final PetService petService;

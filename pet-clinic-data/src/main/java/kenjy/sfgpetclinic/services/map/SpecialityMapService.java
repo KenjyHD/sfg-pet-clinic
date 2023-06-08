@@ -3,12 +3,14 @@ package kenjy.sfgpetclinic.services.map;
 import kenjy.sfgpetclinic.model.Specialty;
 import kenjy.sfgpetclinic.services.SpecialtyService;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-@Primary
+//@Primary
+@Profile({"default", "map"})
 public class SpecialityMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
     @Override
     public Set<Specialty> findAll() {
