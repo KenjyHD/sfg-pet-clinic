@@ -18,10 +18,6 @@ public class PetTypeSDJpaService implements PetTypeService {
         this.petTypeRepository = petTypeRepository;
     }
 
-    public PetType findByLastName(String lastName) {
-        return petTypeRepository.findByLastName(lastName);
-    }
-
     @Override
     public Set<PetType> findAll() {
         Set<PetType> petTypes = new HashSet<>();

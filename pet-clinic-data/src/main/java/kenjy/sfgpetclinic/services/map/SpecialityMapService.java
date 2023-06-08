@@ -1,13 +1,15 @@
 package kenjy.sfgpetclinic.services.map;
 
 import kenjy.sfgpetclinic.model.Specialty;
-import kenjy.sfgpetclinic.services.SpecialityService;
+import kenjy.sfgpetclinic.services.SpecialtyService;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class SpecialityMapService extends AbstractServiceMap<Specialty, Long> implements SpecialityService {
+@Primary
+public class SpecialityMapService extends AbstractServiceMap<Specialty, Long> implements SpecialtyService {
     @Override
     public Set<Specialty> findAll() {
         return super.findAll();

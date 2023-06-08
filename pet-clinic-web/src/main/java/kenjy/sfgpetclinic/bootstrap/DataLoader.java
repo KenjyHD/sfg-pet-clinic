@@ -3,7 +3,7 @@ package kenjy.sfgpetclinic.bootstrap;
 import kenjy.sfgpetclinic.model.*;
 import kenjy.sfgpetclinic.services.OwnerService;
 import kenjy.sfgpetclinic.services.PetTypeService;
-import kenjy.sfgpetclinic.services.SpecialityService;
+import kenjy.sfgpetclinic.services.SpecialtyService;
 import kenjy.sfgpetclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -16,10 +16,10 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
     private final PetTypeService petTypeService;
-    private final SpecialityService specialityService;
+    private final SpecialtyService specialityService;
 
     public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
-                      SpecialityService specialityService) {
+                      SpecialtyService specialityService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
