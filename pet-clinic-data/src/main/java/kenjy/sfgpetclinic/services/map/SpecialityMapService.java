@@ -9,7 +9,7 @@ import java.util.Set;
 
 @Service
 @Primary
-public class SpecialityMapService extends AbstractServiceMap<Specialty, Long> implements SpecialtyService {
+public class SpecialityMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
     @Override
     public Set<Specialty> findAll() {
         return super.findAll();

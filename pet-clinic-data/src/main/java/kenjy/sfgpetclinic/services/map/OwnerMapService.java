@@ -2,23 +2,21 @@ package kenjy.sfgpetclinic.services.map;
 
 import kenjy.sfgpetclinic.model.Owner;
 import kenjy.sfgpetclinic.model.Pet;
-import kenjy.sfgpetclinic.model.PetType;
 import kenjy.sfgpetclinic.services.OwnerService;
 import kenjy.sfgpetclinic.services.PetService;
 import kenjy.sfgpetclinic.services.PetTypeService;
 import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
 @Primary
-public class OwnerServiceMap extends AbstractServiceMap<Owner, Long> implements OwnerService {
+public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
     private final PetTypeService petTypeService;
     private final PetService petService;
 
-    public OwnerServiceMap(PetTypeService petTypeService, PetService petService) {
+    public OwnerMapService(PetTypeService petTypeService, PetService petService) {
         this.petTypeService = petTypeService;
         this.petService = petService;
     }
