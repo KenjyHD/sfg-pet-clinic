@@ -1,8 +1,8 @@
 package kenjy.sfgpetclinic.model;
 
-import jakarta.persistence.*;
 import lombok.*;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -25,13 +25,16 @@ public class Owner extends Person {
     private Set<Pet> pets = new HashSet<>();
 
     @Builder
-    public Owner(Long id, String firstName, String lastName, String address, String city, String telephone,
-                 Set<Pet> pets) {
+    public Owner(Long id, String firstName, String lastName, String address, String city,
+                 String telephone, Set<Pet> pets) {
         super(id, firstName, lastName);
         this.address = address;
         this.city = city;
         this.telephone = telephone;
-        this.pets = pets;
+
+        if(pets != null) {
+            this.pets = pets;
+        }
     }
 
     @Override
@@ -44,5 +47,19 @@ public class Owner extends Person {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
+    }
+
+    public Pet getPet(String name, boolean ignoreNew) {
+        name = name.toLowerCase();
+        for (Pet pet : pets) {
+            if (!ignoreNew || !pet.isNew()) {
+                String compName = pet.getName();
+                compName = compName.toLowerCase();
+                if (compName.equals(name)) {
+                    return pet;
+                }
+            }
+        }
+        return null;
     }
 }

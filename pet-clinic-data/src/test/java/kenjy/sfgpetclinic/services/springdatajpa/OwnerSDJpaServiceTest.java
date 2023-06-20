@@ -4,8 +4,6 @@ import kenjy.sfgpetclinic.model.Owner;
 import kenjy.sfgpetclinic.repositories.OwnerRepository;
 import kenjy.sfgpetclinic.repositories.PetRepository;
 import kenjy.sfgpetclinic.repositories.PetTypeRepository;
-import kenjy.sfgpetclinic.services.OwnerService;
-import kenjy.sfgpetclinic.services.map.OwnerMapService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

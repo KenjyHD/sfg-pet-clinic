@@ -1,6 +1,6 @@
 package kenjy.sfgpetclinic.controllers;
 
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import kenjy.sfgpetclinic.model.Owner;
 import kenjy.sfgpetclinic.services.OwnerService;
 import org.springframework.stereotype.Controller;
